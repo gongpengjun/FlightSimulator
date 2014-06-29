@@ -202,8 +202,9 @@
 		C460F2131960519300F89832 /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = C460F2121960519300F89832 /* LICENSE_Chipmunk.txt */; };
 		C460F2171960519300F89832 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F2161960519300F89832 /* main.m */; };
 		C460F21B1960519300F89832 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F21A1960519300F89832 /* AppDelegate.m */; };
-		C460F21E1960519300F89832 /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F21D1960519300F89832 /* HelloWorldScene.m */; };
 		C460F2211960519300F89832 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F2201960519300F89832 /* IntroScene.m */; };
+		C460F22C19605A3B00F89832 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F22B19605A3B00F89832 /* MainScene.m */; };
+		C460F231196062A000F89832 /* 1024px-world_map_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = C460F230196062A000F89832 /* 1024px-world_map_blank.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -615,10 +616,11 @@
 		C460F2161960519300F89832 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		C460F2191960519300F89832 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		C460F21A1960519300F89832 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		C460F21C1960519300F89832 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		C460F21D1960519300F89832 /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		C460F21F1960519300F89832 /* IntroScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
 		C460F2201960519300F89832 /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
+		C460F22A19605A3B00F89832 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Classes/MainScene.h; sourceTree = "<group>"; };
+		C460F22B19605A3B00F89832 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Classes/MainScene.m; sourceTree = "<group>"; };
+		C460F230196062A000F89832 /* 1024px-world_map_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1024px-world_map_blank.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -699,6 +701,7 @@
 				C460EFD81960518F00F89832 /* Info.plist */,
 				C460EFD91960518F00F89832 /* iTunesArtwork */,
 				C460EFDB1960518F00F89832 /* iTunesArtwork@2x */,
+				C460F22F196062A000F89832 /* Artwork */,
 				C460EFBD1960518F00F89832 /* Icons */,
 			);
 			name = Resources;
@@ -1437,10 +1440,18 @@
 				C460F21A1960519300F89832 /* AppDelegate.m */,
 				C460F21F1960519300F89832 /* IntroScene.h */,
 				C460F2201960519300F89832 /* IntroScene.m */,
-				C460F21C1960519300F89832 /* HelloWorldScene.h */,
-				C460F21D1960519300F89832 /* HelloWorldScene.m */,
+				C460F22A19605A3B00F89832 /* MainScene.h */,
+				C460F22B19605A3B00F89832 /* MainScene.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		C460F22F196062A000F89832 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				C460F230196062A000F89832 /* 1024px-world_map_blank.png */,
+			);
+			path = Artwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1531,6 +1542,7 @@
 				C460EFD51960518F00F89832 /* Icon-Spotlight-iOS7.png in Resources */,
 				C460EFC91960518F00F89832 /* Icon-76@2x.png in Resources */,
 				C460EFD71960518F00F89832 /* Icon-Spotlight-iOS7@2x.png in Resources */,
+				C460F231196062A000F89832 /* 1024px-world_map_blank.png in Resources */,
 				C460EFC71960518F00F89832 /* Icon-76.png in Resources */,
 				C460EFDC1960518F00F89832 /* iTunesArtwork@2x in Resources */,
 			);
@@ -1608,6 +1620,7 @@
 				C460EFF01960519000F89832 /* CCEffect.m in Sources */,
 				C460F0681960519000F89832 /* CCParallaxNode.m in Sources */,
 				C460F16C1960519200F89832 /* OALAudioFile.m in Sources */,
+				C460F22C19605A3B00F89832 /* MainScene.m in Sources */,
 				C460F08E1960519100F89832 /* CCRenderTexture.m in Sources */,
 				C460F0B11960519100F89832 /* CCTexture.m in Sources */,
 				C460F12B1960519100F89832 /* OALAudioTrackNotifications.m in Sources */,
@@ -1650,7 +1663,6 @@
 				C460F1661960519200F89832 /* NSMutableArray+WeakReferences.m in Sources */,
 				C460F0371960519000F89832 /* CCClippingNode.m in Sources */,
 				C460F0A91960519100F89832 /* CCSpriteFrame.m in Sources */,
-				C460F21E1960519300F89832 /* HelloWorldScene.m in Sources */,
 				C460F1311960519100F89832 /* OALSimpleAudio.m in Sources */,
 				C460F0641960519000F89832 /* CCNode+Debug.m in Sources */,
 				C460F14A1960519200F89832 /* ALSoundSourcePool.m in Sources */,
@@ -1871,6 +1883,7 @@
 				C460F2261960519300F89832 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C460F2271960519300F89832 /* Build configuration list for PBXNativeTarget "FlightSimulator" */ = {
 			isa = XCConfigurationList;
@@ -1879,6 +1892,7 @@
 				C460F2291960519300F89832 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
