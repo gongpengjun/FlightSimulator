@@ -25,28 +25,11 @@
     self = [super init];
 	if(self)
     {
-        [self addChild:[self backgroundLayer]];
-        [self addChild:[self flightLayer]];
-        [self addChild:[self menuLayer]];
+        [self addChild:[BackgroundLayer layer]];
+        [self addChild:[FlightLayer layer]];
+        [self addChild:[MenuLayer layer]];
     }
     return self;
-}
-
-#pragma mark - Layers
-
-- (CCNode*)backgroundLayer
-{
-    return [BackgroundLayer layer];
-}
-
-- (CCNode*)flightLayer
-{
-    return [FlightLayer layer];
-}
-
-- (CCNode*)menuLayer
-{
-    return [MenuLayer layer];
 }
 
 @end
