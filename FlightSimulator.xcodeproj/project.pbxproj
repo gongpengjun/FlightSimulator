@@ -205,6 +205,9 @@
 		C460F2211960519300F89832 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F2201960519300F89832 /* IntroScene.m */; };
 		C460F22C19605A3B00F89832 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F22B19605A3B00F89832 /* GameScene.m */; };
 		C460F231196062A000F89832 /* 1024px-world_map_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = C460F230196062A000F89832 /* 1024px-world_map_blank.png */; };
+		C460F2381960C31D00F89832 /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F2371960C31D00F89832 /* BackgroundLayer.m */; };
+		C460F23B1960C5FF00F89832 /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F23A1960C5FF00F89832 /* MenuLayer.m */; };
+		C460F23E1960C77E00F89832 /* FlightLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F23D1960C77E00F89832 /* FlightLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -621,6 +624,12 @@
 		C460F22A19605A3B00F89832 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
 		C460F22B19605A3B00F89832 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = Classes/GameScene.m; sourceTree = "<group>"; };
 		C460F230196062A000F89832 /* 1024px-world_map_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1024px-world_map_blank.png"; sourceTree = "<group>"; };
+		C460F2361960C31D00F89832 /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundLayer.h; path = Classes/BackgroundLayer.h; sourceTree = "<group>"; };
+		C460F2371960C31D00F89832 /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundLayer.m; path = Classes/BackgroundLayer.m; sourceTree = "<group>"; };
+		C460F2391960C5FF00F89832 /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuLayer.h; path = Classes/MenuLayer.h; sourceTree = "<group>"; };
+		C460F23A1960C5FF00F89832 /* MenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuLayer.m; path = Classes/MenuLayer.m; sourceTree = "<group>"; };
+		C460F23C1960C77E00F89832 /* FlightLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlightLayer.h; path = Classes/FlightLayer.h; sourceTree = "<group>"; };
+		C460F23D1960C77E00F89832 /* FlightLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlightLayer.m; path = Classes/FlightLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1440,8 +1449,7 @@
 				C460F21A1960519300F89832 /* AppDelegate.m */,
 				C460F21F1960519300F89832 /* IntroScene.h */,
 				C460F2201960519300F89832 /* IntroScene.m */,
-				C460F22A19605A3B00F89832 /* GameScene.h */,
-				C460F22B19605A3B00F89832 /* GameScene.m */,
+				C460F2321960C25F00F89832 /* GameScene */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1452,6 +1460,45 @@
 				C460F230196062A000F89832 /* 1024px-world_map_blank.png */,
 			);
 			path = Artwork;
+			sourceTree = "<group>";
+		};
+		C460F2321960C25F00F89832 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				C460F22A19605A3B00F89832 /* GameScene.h */,
+				C460F22B19605A3B00F89832 /* GameScene.m */,
+				C460F2331960C28100F89832 /* MenuLayer */,
+				C460F2351960C2F100F89832 /* FlightLayer */,
+				C460F2341960C2E600F89832 /* BackgroundLayer */,
+			);
+			name = GameScene;
+			sourceTree = "<group>";
+		};
+		C460F2331960C28100F89832 /* MenuLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C460F2391960C5FF00F89832 /* MenuLayer.h */,
+				C460F23A1960C5FF00F89832 /* MenuLayer.m */,
+			);
+			name = MenuLayer;
+			sourceTree = "<group>";
+		};
+		C460F2341960C2E600F89832 /* BackgroundLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C460F2361960C31D00F89832 /* BackgroundLayer.h */,
+				C460F2371960C31D00F89832 /* BackgroundLayer.m */,
+			);
+			name = BackgroundLayer;
+			sourceTree = "<group>";
+		};
+		C460F2351960C2F100F89832 /* FlightLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C460F23C1960C77E00F89832 /* FlightLayer.h */,
+				C460F23D1960C77E00F89832 /* FlightLayer.m */,
+			);
+			name = FlightLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1572,6 +1619,7 @@
 				C460F0E61960519100F89832 /* CCGLView.m in Sources */,
 				C460F1431960519200F89832 /* ALDevice.m in Sources */,
 				C460EFF81960519000F89832 /* CCEffectContrast.m in Sources */,
+				C460F23E1960C77E00F89832 /* FlightLayer.m in Sources */,
 				C460F1921960519200F89832 /* CCBAnimationManager.m in Sources */,
 				C460F02D1960519000F89832 /* CCActionTween.m in Sources */,
 				C460F0231960519000F89832 /* CCActionInterval.m in Sources */,
@@ -1587,6 +1635,7 @@
 				C460F0731960519000F89832 /* CCParticleSystem.m in Sources */,
 				C460F1761960519200F89832 /* CCButton.m in Sources */,
 				C460F0AC1960519100F89832 /* CCSpriteFrameCache.m in Sources */,
+				C460F23B1960C5FF00F89832 /* MenuLayer.m in Sources */,
 				C460F0F51960519100F89832 /* CCColor.m in Sources */,
 				C460F06F1960519000F89832 /* CCParticleExamples.m in Sources */,
 				C460F06C1960519000F89832 /* CCParticleBatchNode.m in Sources */,
@@ -1632,6 +1681,7 @@
 				C460F0611960519000F89832 /* CCNode.m in Sources */,
 				C460F0A31960519100F89832 /* CCSprite9Slice.m in Sources */,
 				C460F0991960519100F89832 /* CCScene.m in Sources */,
+				C460F2381960C31D00F89832 /* BackgroundLayer.m in Sources */,
 				C460F0821960519000F89832 /* CCPhysicsNode.m in Sources */,
 				C460F0551960519000F89832 /* CCLayout.m in Sources */,
 				C460F0511960519000F89832 /* CCNodeColor.m in Sources */,
