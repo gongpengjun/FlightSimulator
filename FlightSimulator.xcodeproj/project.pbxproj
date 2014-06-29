@@ -208,6 +208,9 @@
 		C460F2381960C31D00F89832 /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F2371960C31D00F89832 /* BackgroundLayer.m */; };
 		C460F23B1960C5FF00F89832 /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F23A1960C5FF00F89832 /* MenuLayer.m */; };
 		C460F23E1960C77E00F89832 /* FlightLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F23D1960C77E00F89832 /* FlightLayer.m */; };
+		C460F2411960CAC400F89832 /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F2401960CAC400F89832 /* Plane.m */; };
+		C460F2441960D58800F89832 /* plane-32.png in Resources */ = {isa = PBXBuildFile; fileRef = C460F2421960D58800F89832 /* plane-32.png */; };
+		C460F2451960D58800F89832 /* plane.psd in Resources */ = {isa = PBXBuildFile; fileRef = C460F2431960D58800F89832 /* plane.psd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -630,6 +633,10 @@
 		C460F23A1960C5FF00F89832 /* MenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuLayer.m; path = Classes/MenuLayer.m; sourceTree = "<group>"; };
 		C460F23C1960C77E00F89832 /* FlightLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlightLayer.h; path = Classes/FlightLayer.h; sourceTree = "<group>"; };
 		C460F23D1960C77E00F89832 /* FlightLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlightLayer.m; path = Classes/FlightLayer.m; sourceTree = "<group>"; };
+		C460F23F1960CAC400F89832 /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Plane.h; path = Classes/Plane.h; sourceTree = "<group>"; };
+		C460F2401960CAC400F89832 /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plane.m; path = Classes/Plane.m; sourceTree = "<group>"; };
+		C460F2421960D58800F89832 /* plane-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plane-32.png"; sourceTree = "<group>"; };
+		C460F2431960D58800F89832 /* plane.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = plane.psd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1457,6 +1464,8 @@
 		C460F22F196062A000F89832 /* Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				C460F2421960D58800F89832 /* plane-32.png */,
+				C460F2431960D58800F89832 /* plane.psd */,
 				C460F230196062A000F89832 /* 1024px-world_map_blank.png */,
 			);
 			path = Artwork;
@@ -1497,6 +1506,8 @@
 			children = (
 				C460F23C1960C77E00F89832 /* FlightLayer.h */,
 				C460F23D1960C77E00F89832 /* FlightLayer.m */,
+				C460F23F1960CAC400F89832 /* Plane.h */,
+				C460F2401960CAC400F89832 /* Plane.m */,
 			);
 			name = FlightLayer;
 			sourceTree = "<group>";
@@ -1582,10 +1593,12 @@
 				C460EFCF1960518F00F89832 /* Icon-Small-50.png in Resources */,
 				C460F2131960519300F89832 /* LICENSE_Chipmunk.txt in Resources */,
 				C460EFC31960518F00F89832 /* Icon-72.png in Resources */,
+				C460F2451960D58800F89832 /* plane.psd in Resources */,
 				C460F1A51960519200F89832 /* LICENSE_CCBReader.txt in Resources */,
 				C460F1151960519100F89832 /* LICENSE_cocos2d.txt in Resources */,
 				C460EFBA1960518F00F89832 /* Default-568h@2x.png in Resources */,
 				C460EFDA1960518F00F89832 /* iTunesArtwork in Resources */,
+				C460F2441960D58800F89832 /* plane-32.png in Resources */,
 				C460EFD51960518F00F89832 /* Icon-Spotlight-iOS7.png in Resources */,
 				C460EFC91960518F00F89832 /* Icon-76@2x.png in Resources */,
 				C460EFD71960518F00F89832 /* Icon-Spotlight-iOS7@2x.png in Resources */,
@@ -1629,6 +1642,7 @@
 				C460F21B1960519300F89832 /* AppDelegate.m in Sources */,
 				C460F1701960519200F89832 /* OALTools.m in Sources */,
 				C460F1401960519100F89832 /* ALContext.m in Sources */,
+				C460F2411960CAC400F89832 /* Plane.m in Sources */,
 				C460F1511960519200F89832 /* ALWrapper.m in Sources */,
 				C460F19E1960519200F89832 /* CCBSequenceProperty.m in Sources */,
 				C460F1A11960519200F89832 /* CCBLocalizationManager.m in Sources */,
