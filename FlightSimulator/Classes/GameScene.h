@@ -1,5 +1,5 @@
 //
-//  MainScene.h
+//  GameScene.h
 //  FlightSimulator
 //
 //  Created by Gong Pengjun on 14-6-29.
@@ -8,8 +8,8 @@
 
 #import "cocos2d.h"
 
-@interface MainScene : CCScene
+@interface GameScene : CCScene
 
-+ (MainScene *)scene;
++ (GameScene *)scene;
 
 @end
