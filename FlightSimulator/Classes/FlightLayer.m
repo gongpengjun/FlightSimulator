@@ -30,7 +30,7 @@
     {
         self.contentSize = [CCDirector sharedDirector].designSize;
         [self loadPlanes];
-        [self schedule:@selector(addPlane) interval:3.0];
+        [self schedule:@selector(addOnePlane) interval:3.0];
     }
     return self;
 }
