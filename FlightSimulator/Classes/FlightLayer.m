@@ -92,7 +92,7 @@
         endX   = rightPos;
     }
     startY = CCRANDOM_0_1()*(winSize.height-2*planeSize.height) + planeSize.height;
-    endY = startY;
+    endY   = CCRANDOM_0_1()*(winSize.height-2*planeSize.height) + planeSize.height;
     
     CGPoint start = ccp(startX, startY);
     CGPoint end = ccp(endX, endY);
