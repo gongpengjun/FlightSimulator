@@ -45,9 +45,14 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
     self.visible = YES;
 }
 
-- (void)moveTo:(CGPoint)destination;
+- (void)moveTo:(CGPoint)destination
 {
-    CCActionMoveTo * moveTo = [CCActionMoveTo actionWithDuration:10.0 position:destination];
+    [self moveTo:destination duration:20.0f];
+}
+
+- (void)moveTo:(CGPoint)destination duration:(CCTime)duration;
+{
+    CCActionMoveTo * moveTo = [CCActionMoveTo actionWithDuration:duration position:destination];
     CCActionCallBlock * endBlock = [CCActionCallBlock actionWithBlock:^{
         [self removeFromParentAndCleanup:NO];
     }];

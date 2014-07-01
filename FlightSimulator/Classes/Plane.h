@@ -16,5 +16,6 @@
 
 - (void)reset;
 - (void)moveTo:(CGPoint)destination;
+- (void)moveTo:(CGPoint)destination duration:(CCTime)duration;
 
 @end

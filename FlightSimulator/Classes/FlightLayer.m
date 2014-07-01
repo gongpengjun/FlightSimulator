@@ -96,8 +96,9 @@
     
     CGPoint start = ccp(startX, startY);
     CGPoint end = ccp(endX, endY);
+    CGFloat duration = CCRANDOM_0_1()*10.0f + 5.0f;
     plane.position = start;
-    [plane moveTo:end];
+    [plane moveTo:end duration:duration];
 }
 
 @end
