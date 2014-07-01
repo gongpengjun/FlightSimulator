@@ -6,12 +6,15 @@
 //  Copyright (c) 2014年 www.GongPengjun.com. All rights reserved.
 //
 
-#import "CCSprite.h"
+#import "cocos2d.h"
 
 @interface Plane : CCNode
 
 + (Plane*)plane;
 
 @property (nonatomic, assign) NSUInteger tag;
+
+- (void)reset;
+- (void)moveTo:(CGPoint)destination;
 
 @end

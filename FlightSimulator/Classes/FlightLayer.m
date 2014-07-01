@@ -30,6 +30,7 @@
     {
         self.contentSize = [CCDirector sharedDirector].designSize;
         [self loadPlanes];
+        [self addOnePlane];
         [self schedule:@selector(addOnePlane) interval:3.0];
     }
     return self;
@@ -51,28 +52,52 @@
     [self addPlaneCount:1];
 }
 
-- (void)addPlane
+- (void)addPlanes
 {
-    NSUInteger count = CCRANDOM_0_1() * 10 + 1;
+    NSUInteger count = CCRANDOM_0_1() * 2 + 1;
     [self addPlaneCount:count];
 }
 
 - (void)addPlaneCount:(NSUInteger)countToAdd
 {
-    CGSize s = self.contentSize;
     NSUInteger countHasAdded = 0;
     for(Plane *plane in _planeArray)
     {
         if(plane.isRunningInActiveScene)
             continue;
         [self addChild:plane];
-        int randomX = CCRANDOM_0_1() * s.width;
-        int randomY = CCRANDOM_0_1() * s.height;
-        plane.position = ccp(randomX, randomY);
+        [self resetPlane:plane];
         countHasAdded++;
         if(countToAdd == countHasAdded)
             break;
     }
+}
+
+- (void)resetPlane:(Plane*)plane
+{
+    [plane reset];
+    CGFloat startX, startY, endX, endY;
+    CGSize winSize = self.contentSize;
+    CGSize planeSize = plane.contentSize;
+    int direction = CCRANDOM_0_1()*2;
+    CGFloat leftPos = -planeSize.width*0.5;
+    CGFloat rightPos = winSize.width + planeSize.width*0.5;
+    if(direction) {
+        plane.rotation = 180;
+        startX = rightPos;
+        endX   = leftPos;
+    } else {
+        plane.rotation = 0;
+        startX = leftPos;
+        endX   = rightPos;
+    }
+    startY = CCRANDOM_0_1()*(winSize.height-2*planeSize.height) + planeSize.height;
+    endY = startY;
+    
+    CGPoint start = ccp(startX, startY);
+    CGPoint end = ccp(endX, endY);
+    plane.position = start;
+    [plane moveTo:end];
 }
 
 @end
