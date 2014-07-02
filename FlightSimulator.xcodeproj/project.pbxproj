@@ -703,9 +703,13 @@
 		C460EFB31960518F00F89832 /* FlightSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				C460F2191960519300F89832 /* AppDelegate.h */,
+				C460F21A1960519300F89832 /* AppDelegate.m */,
+				C460F21F1960519300F89832 /* StartScene.h */,
+				C460F2201960519300F89832 /* StartScene.m */,
+				C460F2321960C25F00F89832 /* GameScene */,
 				C460EFB41960518F00F89832 /* Resources */,
 				C460EFDD1960518F00F89832 /* Libraries */,
-				C460F2181960519300F89832 /* Classes */,
 				C460F2141960519300F89832 /* Supporting Files */,
 			);
 			path = FlightSimulator;
@@ -1451,18 +1455,6 @@
 				C460F2161960519300F89832 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C460F2181960519300F89832 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C460F2191960519300F89832 /* AppDelegate.h */,
-				C460F21A1960519300F89832 /* AppDelegate.m */,
-				C460F21F1960519300F89832 /* StartScene.h */,
-				C460F2201960519300F89832 /* StartScene.m */,
-				C460F2321960C25F00F89832 /* GameScene */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		C460F22F196062A000F89832 /* Artwork */ = {
