@@ -14,7 +14,9 @@
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[self setupCocos2dWithOptions:nil];
+	[self setupCocos2dWithOptions:@{
+        CCSetupShowDebugStats : @(YES),
+    }];
 	return YES;
 }
 

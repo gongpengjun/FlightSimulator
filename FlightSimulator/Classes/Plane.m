@@ -53,8 +53,9 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
 - (void)moveTo:(CGPoint)destination duration:(CCTime)duration;
 {
     CCActionMoveTo * moveTo = [CCActionMoveTo actionWithDuration:duration position:destination];
+    __weak typeof(self) wself = self;
     CCActionCallBlock * endBlock = [CCActionCallBlock actionWithBlock:^{
-        [self removeFromParentAndCleanup:NO];
+        [wself removeFromParentAndCleanup:NO];
     }];
     CCActionFiniteTime * seq = [CCActionSequence actions:moveTo, endBlock, nil];
     seq.tag = kPlaneActionTagMove;
