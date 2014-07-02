@@ -83,11 +83,11 @@
     CGFloat leftPos = -planeSize.width*0.5;
     CGFloat rightPos = winSize.width + planeSize.width*0.5;
     if(direction) {
-        plane.rotation = 180;
+        plane.scaleX = -1;
         startX = rightPos;
         endX   = leftPos;
     } else {
-        plane.rotation = 0;
+        plane.scaleX = 1;
         startX = leftPos;
         endX   = rightPos;
     }
