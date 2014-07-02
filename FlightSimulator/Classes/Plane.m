@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
     self = [super init];
 	if(self)
     {
-        _planeSprite = [CCSprite spriteWithImageNamed:@"plane-32.png"];
+        _planeSprite = [CCSprite spriteWithImageNamed:@"plane-64.png"];
         [self addChild:_planeSprite];
         
         self.contentSize = _planeSprite.contentSize;

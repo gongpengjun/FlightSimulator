@@ -211,6 +211,8 @@
 		C460F2411960CAC400F89832 /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = C460F2401960CAC400F89832 /* Plane.m */; };
 		C460F2441960D58800F89832 /* plane-32.png in Resources */ = {isa = PBXBuildFile; fileRef = C460F2421960D58800F89832 /* plane-32.png */; };
 		C460F2451960D58800F89832 /* plane.psd in Resources */ = {isa = PBXBuildFile; fileRef = C460F2431960D58800F89832 /* plane.psd */; };
+		C4DE1354196424E5009FFE06 /* plane-64.png in Resources */ = {isa = PBXBuildFile; fileRef = C4DE1353196424E5009FFE06 /* plane-64.png */; };
+		C4DE1356196425A1009FFE06 /* plane-48.png in Resources */ = {isa = PBXBuildFile; fileRef = C4DE1355196425A1009FFE06 /* plane-48.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -637,6 +639,8 @@
 		C460F2401960CAC400F89832 /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plane.m; path = Classes/Plane.m; sourceTree = "<group>"; };
 		C460F2421960D58800F89832 /* plane-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plane-32.png"; sourceTree = "<group>"; };
 		C460F2431960D58800F89832 /* plane.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = plane.psd; sourceTree = "<group>"; };
+		C4DE1353196424E5009FFE06 /* plane-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plane-64.png"; sourceTree = "<group>"; };
+		C4DE1355196425A1009FFE06 /* plane-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plane-48.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1465,6 +1469,8 @@
 			isa = PBXGroup;
 			children = (
 				C460F2421960D58800F89832 /* plane-32.png */,
+				C4DE1355196425A1009FFE06 /* plane-48.png */,
+				C4DE1353196424E5009FFE06 /* plane-64.png */,
 				C460F2431960D58800F89832 /* plane.psd */,
 				C460F230196062A000F89832 /* 1024px-world_map_blank.png */,
 			);
@@ -1590,6 +1596,7 @@
 				C460EFCD1960518F00F89832 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				C460EFBC1960518F00F89832 /* Default-Landscape~ipad.png in Resources */,
 				C460EFD11960518F00F89832 /* Icon-Small.png in Resources */,
+				C4DE1354196424E5009FFE06 /* plane-64.png in Resources */,
 				C460EFCF1960518F00F89832 /* Icon-Small-50.png in Resources */,
 				C460F2131960519300F89832 /* LICENSE_Chipmunk.txt in Resources */,
 				C460EFC31960518F00F89832 /* Icon-72.png in Resources */,
@@ -1605,6 +1612,7 @@
 				C460F231196062A000F89832 /* 1024px-world_map_blank.png in Resources */,
 				C460EFC71960518F00F89832 /* Icon-76.png in Resources */,
 				C460EFDC1960518F00F89832 /* iTunesArtwork@2x in Resources */,
+				C4DE1356196425A1009FFE06 /* plane-48.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
