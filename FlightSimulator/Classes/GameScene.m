@@ -7,7 +7,7 @@
 //
 
 #import "GameScene.h"
-#import "IntroScene.h"
+#import "StartScene.h"
 #import "cocos2d-ui.h"
 #import "BackgroundLayer.h"
 #import "FlightLayer.h"

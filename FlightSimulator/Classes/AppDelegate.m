@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------
 
 #import "AppDelegate.h"
-#import "IntroScene.h"
+#import "StartScene.h"
 
 @implementation AppDelegate
 
@@ -22,7 +22,7 @@
 
 -(CCScene *)startScene
 {
-	return [IntroScene scene];
+	return [StartScene scene];
 }
 
 @end

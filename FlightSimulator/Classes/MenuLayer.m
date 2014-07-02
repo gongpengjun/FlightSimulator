@@ -7,7 +7,7 @@
 //
 
 #import "MenuLayer.h"
-#import "IntroScene.h"
+#import "StartScene.h"
 
 @implementation MenuLayer
 
@@ -37,7 +37,7 @@
 
 - (void)onBackButtonAction:(id)sender
 {
-    [[CCDirector sharedDirector] replaceScene:[IntroScene scene]
+    [[CCDirector sharedDirector] replaceScene:[StartScene scene]
                                withTransition:[CCTransition transitionPushWithDirection:CCTransitionDirectionRight duration:1.0f]];
 }
 

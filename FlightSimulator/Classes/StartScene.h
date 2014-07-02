@@ -1,5 +1,5 @@
 //
-//  IntroScene.h
+//  StartScene.h
 //  FlightSimulator
 //
 //  Created by Gong Pengjun on 14-6-29.
@@ -19,11 +19,11 @@
  *  Main usage for CCLayer now, is to make colored backgrounds (rectangles)
  *
  */
-@interface IntroScene : CCScene
+@interface StartScene : CCScene
 
 // -----------------------------------------------------------------------
 
-+ (IntroScene *)scene;
++ (StartScene *)scene;
 - (id)init;
 
 // -----------------------------------------------------------------------

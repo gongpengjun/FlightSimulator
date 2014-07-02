@@ -1,5 +1,5 @@
 //
-//  IntroScene.m
+//  StartScene.m
 //  FlightSimulator
 //
 //  Created by Gong Pengjun on 14-6-29.
@@ -8,20 +8,20 @@
 // -----------------------------------------------------------------------
 
 // Import the interfaces
-#import "IntroScene.h"
+#import "StartScene.h"
 #import "GameScene.h"
 
 // -----------------------------------------------------------------------
 #pragma mark - IntroScene
 // -----------------------------------------------------------------------
 
-@implementation IntroScene
+@implementation StartScene
 
 // -----------------------------------------------------------------------
 #pragma mark - Create & Destroy
 // -----------------------------------------------------------------------
 
-+ (IntroScene *)scene
++ (StartScene *)scene
 {
 	return [[self alloc] init];
 }
