@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
     self.visible = YES;
 }
 
-- (void)moveWithLineRouteFrom:(CGPoint)from to:(CGPoint)to duration:(CCTime)dt direction:(BOOL)direction
+- (void)moveWithLinerRouteFrom:(CGPoint)from to:(CGPoint)to duration:(CCTime)dt direction:(BOOL)direction
 {
     self.scaleX = direction ? 1 : -1;
     self.position = from;
@@ -63,8 +63,8 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
 - (void)moveWithBezierRouteFrom:(CGPoint)from to:(CGPoint)to duration:(CCTime)dt direction:(BOOL)direction
 {
     CGSize s = self.parent.contentSize;
-    CGFloat h[] = {};
-    CGFloat r[] = {};
+    CGFloat h[] = { 55.0f, s.height - 10.0f};
+    CGFloat r[] = {(h[1]-h[0])/2, -(h[1]-h[0])/2};
     self.scaleX = direction ? 1 : -1;
     
     ccBezierConfig b1, b2;
@@ -74,18 +74,21 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
     b2.controlPoint_1 = b2.controlPoint_2 = ccp(s.width/2 + (direction?r[1]:r[0])/3, direction?h[0]:h[1]);
     b1.endPosition = ccp(s.width/2 + (direction?r[1]:r[0]), direction?h[0]:h[1]);
     
-    CCActionFiniteTime *move = nil;
-    [self runAction:move];
+    CCActionMoveTo   *move1   = [CCActionMoveTo actionWithDuration:dt/4 position:ccp(s.width/2 + direction?r[0]:r[1], direction?h[1]:h[0])];
+    CCActionBezierTo *bezier1 = [CCActionBezierTo actionWithDuration:dt/4 bezier:b1];
+    CCActionBezierTo *bezier2 = [CCActionBezierTo actionWithDuration:dt/4 bezier:b2];
+    CCActionMoveTo *move2 = [CCActionMoveTo actionWithDuration:dt/4 position:to];
+    __weak typeof(self) wself = self;
+    CCActionCallBlock * endBlock = [CCActionCallBlock actionWithBlock:^{
+        [wself removeFromParentAndCleanup:NO];
+    }];
+    CCActionFiniteTime *seq = [CCActionSequence actions:move1, bezier1, bezier2, move2, endBlock, nil];
+    [self runAction:seq];
 }
 
-- (void)moveTo:(CGPoint)destination
+- (void)moveTo:(CGPoint)destination duration:(CCTime)dt;
 {
-    [self moveTo:destination duration:20.0f];
-}
-
-- (void)moveTo:(CGPoint)destination duration:(CCTime)duration;
-{
-    CCActionMoveTo * moveTo = [CCActionMoveTo actionWithDuration:duration position:destination];
+    CCActionMoveTo * moveTo = [CCActionMoveTo actionWithDuration:dt position:destination];
     __weak typeof(self) wself = self;
     CCActionCallBlock * endBlock = [CCActionCallBlock actionWithBlock:^{
         [wself removeFromParentAndCleanup:NO];
