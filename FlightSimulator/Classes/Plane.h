@@ -17,6 +17,5 @@
 - (void)reset;
 - (void)moveWithLinerRouteFrom:(CGPoint)from to:(CGPoint)to duration:(CCTime)dt direction:(BOOL)direction;
 - (void)moveWithBezierRouteFrom:(CGPoint)from to:(CGPoint)to duration:(CCTime)dt direction:(BOOL)direction;
-- (void)moveTo:(CGPoint)destination duration:(CCTime)dt;
 
 @end

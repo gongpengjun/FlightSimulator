@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
 
 - (void)moveWithLinerRouteFrom:(CGPoint)from to:(CGPoint)to duration:(CCTime)dt direction:(BOOL)direction
 {
-    self.scaleX = direction ? 1 : -1;
+    self.scaleX = direction ? -1 : 1;
     self.position = from;
     CCActionMoveTo * moveTo = [CCActionMoveTo actionWithDuration:dt position:to];
     __weak typeof(self) wself = self;
@@ -83,18 +83,6 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
         [wself removeFromParentAndCleanup:NO];
     }];
     CCActionFiniteTime *seq = [CCActionSequence actions:move1, bezier1, bezier2, move2, endBlock, nil];
-    [self runAction:seq];
-}
-
-- (void)moveTo:(CGPoint)destination duration:(CCTime)dt;
-{
-    CCActionMoveTo * moveTo = [CCActionMoveTo actionWithDuration:dt position:destination];
-    __weak typeof(self) wself = self;
-    CCActionCallBlock * endBlock = [CCActionCallBlock actionWithBlock:^{
-        [wself removeFromParentAndCleanup:NO];
-    }];
-    CCActionFiniteTime * seq = [CCActionSequence actions:moveTo, endBlock, nil];
-    seq.tag = kPlaneActionTagMove;
     [self runAction:seq];
 }
 

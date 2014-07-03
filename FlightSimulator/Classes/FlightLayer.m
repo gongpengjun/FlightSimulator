@@ -83,11 +83,9 @@
     CGFloat leftPos = -planeSize.width*0.5;
     CGFloat rightPos = winSize.width + planeSize.width*0.5;
     if(direction) {
-        plane.scaleX = -1;
         startX = rightPos;
         endX   = leftPos;
     } else {
-        plane.scaleX = 1;
         startX = leftPos;
         endX   = rightPos;
     }
@@ -97,8 +95,7 @@
     CGPoint start = ccp(startX, startY);
     CGPoint end = ccp(endX, endY);
     CGFloat duration = CCRANDOM_0_1()*10.0f + 5.0f;
-    plane.position = start;
-    [plane moveTo:end duration:duration];
+    [plane moveWithLinerRouteFrom:start to:end duration:duration direction:direction];
 }
 
 @end
