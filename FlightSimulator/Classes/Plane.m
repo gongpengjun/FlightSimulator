@@ -42,7 +42,6 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
 
 - (void)reset;
 {
-    self.rotation = 0;
     self.visible = YES;
 }
 
@@ -65,7 +64,8 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
     CGSize s = self.parent.contentSize;
     CGFloat h[] = { 55.0f, s.height - 10.0f};
     CGFloat r[] = {(h[1]-h[0])/2, -(h[1]-h[0])/2};
-    self.scaleX = direction ? 1 : -1;
+    self.scaleX = direction ? -1 : 1;
+    self.position = from;
     
     ccBezierConfig b1, b2;
     b1.controlPoint_1 = b1.controlPoint_2 = ccp(s.width/2 + (direction?r[0]:r[1])/3, direction?h[1]:h[0]);

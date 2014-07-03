@@ -66,10 +66,30 @@
         if(plane.isRunningInActiveScene)
             continue;
         [self addChild:plane];
-        [self resetPlane:plane];
+        //[self resetPlane:plane];
+        [self configPlane:plane];
         countHasAdded++;
         if(countToAdd == countHasAdded)
             break;
+    }
+}
+
+- (void)configPlane:(Plane*)plane
+{
+    int direction = CCRANDOM_0_1()*2;
+    int route = CCRANDOM_0_1()*2;
+    [plane reset];
+    CGSize s = self.contentSize;
+    if(route == 1) {
+        [plane moveWithBezierRouteFrom:ccp(-10, CCRANDOM_0_1() * s.height)
+                                    to:ccp(s.width + 10, CCRANDOM_0_1() * s.height)
+                              duration:10
+                             direction:direction?YES:NO];
+    } else {
+        [plane moveWithLinerRouteFrom:ccp(-10, CCRANDOM_0_1() * s.height)
+                                   to:ccp(s.width + 10, CCRANDOM_0_1() * s.height)
+                             duration:10
+                            direction:direction?YES:NO];
     }
 }
 
@@ -96,6 +116,7 @@
     CGPoint end = ccp(endX, endY);
     CGFloat duration = CCRANDOM_0_1()*10.0f + 5.0f;
     [plane moveWithLinerRouteFrom:start to:end duration:duration direction:direction];
+    //[plane moveWithBezierRouteFrom:start to:end duration:duration direction:direction];
 }
 
 @end
