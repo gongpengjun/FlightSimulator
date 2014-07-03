@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, PlaneActionTag) {
     b1.endPosition = ccp(s.width/2, h[0]+r[0]);
     
     b2.controlPoint_1 = b2.controlPoint_2 = ccp(s.width/2 + (direction?r[1]:r[0])/3, direction?h[0]:h[1]);
-    b1.endPosition = ccp(s.width/2 + (direction?r[1]:r[0]), direction?h[0]:h[1]);
+    b2.endPosition = ccp(s.width/2 + (direction?r[1]:r[0]), direction?h[0]:h[1]);
     
     CCActionMoveTo   *move1   = [CCActionMoveTo actionWithDuration:dt/4 position:ccp(s.width/2 + direction?r[0]:r[1], direction?h[1]:h[0])];
     CCActionBezierTo *bezier1 = [CCActionBezierTo actionWithDuration:dt/4 bezier:b1];
