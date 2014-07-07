@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C43576EF196B6460002C7A48 /* BezierLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C43576EE196B6460002C7A48 /* BezierLayer.m */; };
 		C460EF9A1960518F00F89832 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C460EF991960518F00F89832 /* QuartzCore.framework */; };
 		C460EF9C1960518F00F89832 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C460EF9B1960518F00F89832 /* OpenGLES.framework */; };
 		C460EF9E1960518F00F89832 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C460EF9D1960518F00F89832 /* OpenAL.framework */; };
@@ -226,6 +227,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C43576ED196B6460002C7A48 /* BezierLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BezierLayer.h; path = Classes/BezierLayer.h; sourceTree = "<group>"; };
+		C43576EE196B6460002C7A48 /* BezierLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BezierLayer.m; path = Classes/BezierLayer.m; sourceTree = "<group>"; };
 		C460EF961960518F00F89832 /* FlightSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C460EF991960518F00F89832 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C460EF9B1960518F00F89832 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -665,6 +668,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C43576F0196B6476002C7A48 /* BezierLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C43576ED196B6460002C7A48 /* BezierLayer.h */,
+				C43576EE196B6460002C7A48 /* BezierLayer.m */,
+			);
+			name = BezierLayer;
+			sourceTree = "<group>";
+		};
 		C460EF8D1960518F00F89832 = {
 			isa = PBXGroup;
 			children = (
@@ -1476,6 +1488,7 @@
 				C460F22B19605A3B00F89832 /* GameScene.m */,
 				C460F2331960C28100F89832 /* MenuLayer */,
 				C460F2351960C2F100F89832 /* FlightLayer */,
+				C43576F0196B6476002C7A48 /* BezierLayer */,
 				C460F2341960C2E600F89832 /* BackgroundLayer */,
 			);
 			name = GameScene;
@@ -1741,6 +1754,7 @@
 				C460F04E1960519000F89832 /* CCLabelTTF.m in Sources */,
 				C460F0041960519000F89832 /* CCEffectStack.m in Sources */,
 				C460F0001960519000F89832 /* CCEffectPixellate.m in Sources */,
+				C43576EF196B6460002C7A48 /* BezierLayer.m in Sources */,
 				C460F0201960519000F89832 /* CCActionInstant.m in Sources */,
 				C460F0581960519000F89832 /* CCLayoutBox.m in Sources */,
 				C460F0BA1960519100F89832 /* CCTiledMap.m in Sources */,
