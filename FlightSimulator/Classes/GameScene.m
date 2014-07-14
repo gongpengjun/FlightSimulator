@@ -12,6 +12,7 @@
 #import "BackgroundLayer.h"
 #import "FlightLayer.h"
 #import "MenuLayer.h"
+#import "BezierLayer.h"
 
 @implementation GameScene
 
@@ -26,7 +27,8 @@
 	if(self)
     {
         [self addChild:[BackgroundLayer layer]];
-        [self addChild:[FlightLayer layer]];
+        //[self addChild:[FlightLayer layer]];
+        [self addChild:[BezierLayer layer]];
         [self addChild:[MenuLayer layer]];
     }
     return self;
