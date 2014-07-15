@@ -57,7 +57,7 @@
     bezierConfig.endPosition = touchLoc;
     CCActionBezierTo *bezierAction = [CCActionBezierTo actionWithDuration:1.0f bezier:bezierConfig];
     [_plane runAction:bezierAction];
-#else
+#elif 1
     CGPoint curLoc = _plane.position;
     CGPoint centerLoc = ccpMidpoint(curLoc, touchLoc);
     
@@ -67,6 +67,24 @@
     CCActionBezierTo *bezierAction1 = [CCActionBezierTo actionWithDuration:1.0f bezier:bezierConfig];
     
     bezierConfig.controlPoint_1 = ccp(centerLoc.x,touchLoc.y);
+    bezierConfig.controlPoint_2 = touchLoc;
+    bezierConfig.endPosition = touchLoc;
+    CCActionBezierTo *bezierAction2 = [CCActionBezierTo actionWithDuration:1.0f bezier:bezierConfig];
+    
+    CCActionSequence *seq = [CCActionSequence actionOne:bezierAction1 two:bezierAction2];
+    [_plane runAction:seq];
+#else
+    CGPoint curLoc = _plane.position;
+    CGPoint centerLoc = ccpMidpoint(curLoc, touchLoc);
+    CGPoint center1Loc = ccp((centerLoc.x-curLoc.x)/2, curLoc.y);
+    CGPoint center2Loc = ccp((touchLoc.x-centerLoc.x)/2, touchLoc.y);
+    
+    bezierConfig.controlPoint_1 = center1Loc;
+    bezierConfig.controlPoint_2 = centerLoc;
+    bezierConfig.endPosition = centerLoc;
+    CCActionBezierTo *bezierAction1 = [CCActionBezierTo actionWithDuration:1.0f bezier:bezierConfig];
+    
+    bezierConfig.controlPoint_1 = center2Loc;
     bezierConfig.controlPoint_2 = touchLoc;
     bezierConfig.endPosition = touchLoc;
     CCActionBezierTo *bezierAction2 = [CCActionBezierTo actionWithDuration:1.0f bezier:bezierConfig];
